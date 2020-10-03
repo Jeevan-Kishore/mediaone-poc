@@ -6,7 +6,7 @@ import * as sapper from '@sapper/server';
 const { PORT, NODE_ENV } = process.env;
 const dev = NODE_ENV === 'development';
 
-const polkaRouter =  polka() // You can also use Express
+const app =  polka() // You can also use Express
 	.use(
 		compression({ threshold: 0 }),
 		sirv('static', { dev }),
@@ -17,5 +17,5 @@ const polkaRouter =  polka() // You can also use Express
 	});
 
 module.exports = {
-	polkaRouter
+	app
 };

@@ -16,6 +16,4 @@ const app =  polka() // You can also use Express
 		if (err) console.log('error', err);
 	});
 
-module.exports = {
-	app
-};
+module.exports = app;

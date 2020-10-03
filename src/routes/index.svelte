@@ -33,7 +33,7 @@
 </style>
 
 <svelte:head>
-	<title>Sapper project template</title>
+	<title>Svelte Perf POC</title>
 </svelte:head>
 
 <h1>Great success!</h1>

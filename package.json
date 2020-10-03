@@ -2,6 +2,9 @@
   "name": "media-poc",
   "description": "POC to analyze performance gains for mediaone",
   "version": "0.0.1",
+  "engines": {
+    "node": "12.x"
+  },
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper build --legacy",

@@ -34,6 +34,14 @@
 
 <svelte:head>
     <title>{story.headline}</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-915M9ZV6LZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){window.dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-915M9ZV6LZ');
+    </script>
 </svelte:head>
 
 <h1>{story.headline}</h1>

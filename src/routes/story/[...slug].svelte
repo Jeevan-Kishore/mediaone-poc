@@ -13,7 +13,7 @@
         // you to make credentialed requests on both
         // server and client
 
-        const { data: { story = {} } } = await (await this.fetch(`/api/route-data?path=${slug}`)).json();
+        const { data: { story = {} } } = await (await this.fetch(`https://www.mediaonetv.in/route-data.json?path=${slug}`)).json();
         const {cards = []} = story;
         return { story, cards };
     }

@@ -30,6 +30,7 @@
     import Youtube from "../../components/Youtube.svelte"
     import Image from "../../components/Image/Image.svelte";
     import ImageLoader from "../../components/Image/ImageLoader.svelte";
+    import IntersectionObserver from "../../components/Image/IntersectionObserver.svelte";
 
     export let story;
     export let cards;
@@ -83,5 +84,16 @@
         {/each}
 
     {/each}
+
+    <IntersectionObserver once={true} let:intersecting={intersecting}>
+        {#if intersecting}
+        <!-- /5463099287/svelte-728x90-300x250 -->
+            <div id='div-gpt-ad-1608554915254-0'>
+                <script>
+                    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1608554915254-0'); });
+                </script>
+            </div>
+        {/if}
+    </IntersectionObserver>
 
 </div>

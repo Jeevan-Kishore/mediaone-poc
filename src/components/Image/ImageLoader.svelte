@@ -1,11 +1,10 @@
 <script>
     import PlaceHolder from "./PlaceHolder.svelte";
+    import IntersectionObserver from './IntersectionObserver.svelte'
+    import Image from './Image.svelte'
 
     export let src
     export let alt
-
-    import IntersectionObserver from './IntersectionObserver.svelte'
-    import Image from './Image.svelte'
 
 </script>
 

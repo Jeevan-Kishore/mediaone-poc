@@ -28,7 +28,6 @@
 <script>
     import HtmlText from "../../components/HtmlText.svelte"
     import Youtube from "../../components/Youtube.svelte"
-    import Image from "../../components/Image/Image.svelte";
     import ImageLoader from "../../components/Image/ImageLoader.svelte";
     import IntersectionObserver from "../../components/Image/IntersectionObserver.svelte";
 
@@ -43,7 +42,6 @@
 
 <svelte:head>
     <title>{story.headline}</title>
-    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
     <script>
         window.googletag = window.googletag || {cmd: []};
         googletag.cmd.push(function() {

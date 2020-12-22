@@ -10,10 +10,6 @@
 /*Mobile first approach*/
 
 /* Mobile styles begin */
-.menuLevelOne{
-	display: none;
-}
-
 .menuWrapper{
 	background-color: #00407f;
 	color: #FFFFFF;

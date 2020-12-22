@@ -1,4 +1,6 @@
 <script>
+    import PlaceHolder from "./PlaceHolder.svelte";
+
     export let src
     export let alt
 
@@ -10,5 +12,7 @@
 <IntersectionObserver once={true} let:intersecting={intersecting}>
     {#if intersecting}
         <Image {alt} {src} />
+    {:else}
+        <PlaceHolder />
     {/if}
 </IntersectionObserver>

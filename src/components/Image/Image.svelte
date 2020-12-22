@@ -1,11 +1,11 @@
 <script>
-    export let src;
-    export let alt;
+    export let src
+    export let alt
 
     import { onMount } from 'svelte'
 
-    let loaded = false;
-    let thisImage;
+    let loaded = false
+    let thisImage
 
     onMount(() => {
         thisImage.onload = () => {

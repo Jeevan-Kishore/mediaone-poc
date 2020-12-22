@@ -13,9 +13,14 @@
         // you to make credentialed requests on both
         // server and client
 
-        const { data: { story = {} } } = await (await this.fetch(`https://www.mediaonetv.in/route-data.json?path=${slug}`)).json();
+        const {
+            data: {
+                story = {}
+            },
+            config = {}
+        } = await (await this.fetch(`https://www.mediaonetv.in/route-data.json?path=${slug}`)).json();
         const {cards = []} = story;
-        return { story, cards };
+        return { story, cards, config };
     }
 </script>
 
@@ -23,9 +28,12 @@
 <script>
     import HtmlText from "../../components/HtmlText.svelte"
     import Youtube from "../../components/Youtube.svelte"
+    import Image from "../../components/Image/Image.svelte";
+    import ImageLoader from "../../components/Image/ImageLoader.svelte";
 
     export let story;
     export let cards;
+    export let config;
 
 </script>
 
@@ -48,7 +56,7 @@
 
 
 <div class='content'>
-
+    <ImageLoader src={`https://${config["cdn-image"]}/${story["hero-image-s3-key"]}`} alt="Our image"/>
     <!--Loop story cards-->
     {#each cards as card}
 

@@ -42,13 +42,20 @@
 
 <svelte:head>
     <title>{story.headline}</title>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-915M9ZV6LZ"></script>
+    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){window.dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-915M9ZV6LZ');
+        window.googletag = window.googletag || {cmd: []};
+        googletag.cmd.push(function() {
+            googletag.defineSlot('/5463099287/svelte-300x250', [300, 250], 'div-gpt-ad-1608554873198-0').addService(googletag.pubads());
+            var mapping = googletag.sizeMapping()
+                    .addSize([1024, 768], [728, 90])
+                    .addSize([640, 480], [300, 250])
+                    .addSize([0, 0], [300, 250])
+                    .build();
+            googletag.defineSlot('/5463099287/svelte-728x90-300x250', [[728, 90], [300, 250]], 'div-gpt-ad-1608554915254-0').defineSizeMapping(mapping).addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
     </script>
 </svelte:head>
 
